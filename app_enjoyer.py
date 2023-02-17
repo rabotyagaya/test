@@ -59,8 +59,10 @@ class GUI_interface:
         self.entry_avg.delete(0, END)
 
     def __draw_download_widgets(self):
-        image = PhotoImage(file="./images/excel.ico")
-        Button(self.root, image=image, command=lambda: print('click'), relief = 'flat').grid(row=4, column=1)
+        image = PhotoImage(file="excel.png")
+        image = image.subsample(1,1)
+         
+        Button(self.root, image = image).grid(row = 3, column = 0)
 
 
     def __write_numbers(self, writing_array, number):
